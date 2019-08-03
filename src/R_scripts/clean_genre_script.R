@@ -2,7 +2,7 @@
 suppressMessages(library(tidyverse))
 
 ## Load data ####
-DATA_PATH <- '../../data/skate_data_uncleaned.csv'
+DATA_PATH <- 'data/skate_data_uncleaned.csv'
 df <- suppressMessages(read_csv(DATA_PATH))
 df$index <- NULL
 count_df <- df
@@ -12,7 +12,9 @@ count_df$genre <- NULL
 count_df$genre[count_df$genre2 %in% c("50's Rock", "60's Rock", "70's Rock", "European Pop", "Folk Rock", "New Romantic",
                                       "Retro Rock Revival", "Western Pop"
 )] = 'Classic Rock'
+
 Oldies <- c("Classic Country", "Classic Pop Vocals")
+
 count_df$genre[count_df$genre2 %in% c("Dance & Club", "Dubstep", "Downtempo, Lounge & Ambient", "Electronica Fusion",
                                       "Electronica Mainstream", "Game Music", "House", "Indian Subcontinent Pop", "Techno",
                                       "Trance")] = 'Electronic'

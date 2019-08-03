@@ -1,7 +1,7 @@
 # CREATE DATA FOR JOYPLOT 
 
 ## Load Data ####
-genre_df <- read_csv('../data/cleaned_skatedata.csv')
+genre_df <- read_csv('data/cleaned_skatedata.csv')
 
 ## Create Dataframe of genre percentages by year
 genre_pct_by_year <- genre_df %>%
